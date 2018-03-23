@@ -1,49 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
-    <style>
-      body { background-color: #F2F6D0 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: #FCF5C7;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- material-icons cdn -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+</head>
+<main>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#!" class="brand-logo">News Scraper</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="http://bbc.com/"><i class="material-icons left">web</i></a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div class="container">
+        <div class="row" id="articles">
+            <div class="card-content white-text">
+                <p> </p>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+        <h1>Comment</h1>
+          <input placeholder="Type your name" id="first_name" type="text" class="validate">
+          <textarea id="bodyinput" name="body"></textarea>
+         <form action="articles/#" method="post"></form >
+        </div>
+        <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" id="savecomment">Save Comment</button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="savecomment">Save Comment</a>
+
+        </div>
+    </div>
+    <footer class="page-footer blue-grey darken-3">
+        <div class="footer-copyright">
+            <!-- <div class="container"> -->
+            © All article data was web scraped from<a class="grey-text text-lighten-4" href="http:/bbc.com/"> bbc.com</a>
+            <!-- </div> -->
+        </div>
+    </footer>
     <script src="app.js"></script>
-  </body>
+</body>
+</main>
+
 </html>
